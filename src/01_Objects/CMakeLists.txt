@@ -14,5 +14,6 @@
 # sources           - Define a list of sources that are required in the 
 #                     construction of the executable.
 add_executable(builtin_types 01_builtin_types.cpp)
+add_executable(references 02_references.cpp)
 
 set_property(TARGET builtin_types PROPERTY CXX_STANDARD 11)
