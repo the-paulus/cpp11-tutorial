@@ -36,7 +36,7 @@ int main(int argc, char **argv) {
     cout << "The address of ival (&ival):          " << &ival << endl;
     
     /*
-     * Using an astrix (*) before a variable, or lvalue will return the data
+     * Using an astrix (*) before a variable, or lvalue, will return the data
      * stored at the address assigned to the pointer. This is called dereferencing.
      */
     cout << "ptr_ival is dereferenced:             " << *ptr_ival << endl;
@@ -46,12 +46,11 @@ int main(int argc, char **argv) {
     cout << "Current value of ival:                " << ival << endl;
     
     /* 
-     * Indirectly assigning ival a new value -- this can also be acheived by 
-     * using references (see refernces.cpp). Before assigning a new value to the object at the
-     * address held within the pointer, it must first be dereferenced. Since
-     * pointers are objects just like ints, doubles, floats, etc., they 
-     * cannot be used as an "alias". The assignment illistrated below will 
-     * fail because 20 isn't an address. 
+     * Indirectly assigning ival a new value -- this can also be achieved by 
+     * using references (see 02_refernces.cpp). Pointers of a specified 
+     * type must point to objects of the same type, just like references.
+     * The assignment illistrated below will fail because 20 isn't an
+     * address. 
      * 
      * ptr_ival = 20; 
      * 
@@ -78,14 +77,6 @@ int main(int argc, char **argv) {
     
     cout << "Value referenced by 'ref_ival':       " << ref_ival << endl;
     cout << "Address referenced by 'ref_ival':     " << &ref_ival << endl;
-    
-    /*
-     * Changing the value of the object referenced with ref_ival to 31
-     */
-    ref_ival = 31;
-    
-    cout << "Value of ival after ref_ival = 31:    " << ival << endl;
-    cout << endl << endl;
     
     /*
      * In the statement below we are creating a pointer to a pointer. Since 
