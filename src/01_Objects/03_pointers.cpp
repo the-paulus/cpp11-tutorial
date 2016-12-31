@@ -8,9 +8,9 @@ using std::endl;
 int main(int argc, char **argv) {
     
     /* 
-     * First and foremost, initialize all pointers. Although inititializing 
-     * a pointer to 0 is acceptable the nullptr initialization method is preferred
-     * and safest to use between architectures.
+     * First and foremost, initialize all pointers. Although initializing 
+     * a pointer to 0 is acceptable the nullptr initialization method
+     * is preferred and safest to use between architectures.
      * 
      * When 0 is used to initialize a pointer, you are initializing it to a null. 
      * Anything else that's not an address will result in a compiler error. 
@@ -22,8 +22,8 @@ int main(int argc, char **argv) {
     
     /* 
      * 'int *' is a compound type, which can only contain addresses of objects 
-     * that are of type 'int'. Assigning addresses of objects such as doubles 
-     * or floats is an error. The '&' has multiple uses in C++ and the context
+     * that are of type 'int'. Assigning objects of any other type will result
+     * in an error. The '&' has multiple uses in C++ and the context
      * in which they are used will determine what will happen. In this case, 
      * prefixing an object with the '&' will return that object's memory address.
      */
@@ -112,9 +112,10 @@ int main(int argc, char **argv) {
      * at that address.
      */
     void *vptr_ival = &ival;
+    int *ptr_vptr_ival = static_cast<int*>(vptr_ival);
     
     cout << "&ival:                                   " << &ival << endl;
     cout << "vptr_ival:                               " << vptr_ival << endl;
-    cout << "static_cast<int>(vptr_ival):            " << *dynamic_cast<int>(vptr_ival) << endl;
+    cout << "static_cast<int>(vptr_ival):             " << *ptr_vptr_ival << endl;
     return 0;
 }
