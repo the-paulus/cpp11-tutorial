@@ -1,5 +1,5 @@
-#ifndef __FUNCTIONS_H__
-#define __FUNCTIONS_H__
+#ifndef __SIMPLE_FUNCTIONS_H__
+#define __SIMPLE_FUNCTIONS_H__
 
 #include <iostream>
 #include <string>
