@@ -1,10 +1,14 @@
 #ifndef __SIMPLE_FUNCTIONS_H__
 #define __SIMPLE_FUNCTIONS_H__
 
+#include <initializer_list>
 #include <iostream>
 #include <string>
+#include <vector>
 
+using std::initializer_list;
 using std::string;
+using std::vector;
 
 /*
  * Functions are declared in a header file and defined a file with the same 
@@ -58,5 +62,7 @@ void array_argument_function_3(const int ptr_arg[], size_t size);
  * if they are called.
  */
 void declared_not_defined_function(void);
+
+vector<string> returning_lists(bool empty = false);
 
 #endif

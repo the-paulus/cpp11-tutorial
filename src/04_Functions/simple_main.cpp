@@ -150,8 +150,31 @@ int main(int argv, char **argc)
      * array should be done within the function and not passed as an argument.
      */
     array_argument_function_3(iarr, (sizeof(iarr)/sizeof(*iarr)));
-    
     /***** End pointer function demonstration - using size as an argument *****/
+    
+    
+    
+    /***** Returning initialized list demonstration *****/
+    vector<string> vector_string = returning_lists();
+    
+    cout << "Values in vector_string: " << endl;
+    
+    for(auto s : vector_string)
+    {
+        cout << s << endl;
+    }
+    
+    vector_string = returning_lists(true);
+    
+    cout << "Values in vector_string (empty):" << endl;
+    
+    for(auto s : vector_string)
+    {
+        cout << s << endl;
+    }
+    /***** End returning initialized list demonstration *****/
+    
+    
     
   /*
    * Even though we have indicated that main will return an integer but 

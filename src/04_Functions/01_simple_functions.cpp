@@ -3,7 +3,9 @@
 
 using std::cout;
 using std::endl;
+using std::initializer_list;
 using std::string;
+using std::vector;
 
 /*
  * Defining the function called simple_void_function1. When called, it simply 
@@ -159,7 +161,8 @@ void pointer_argument_function(string *ptr_arg)
 
 /*
  * When working with array arguments, they cannot be copied. Instead they are
- * treated as pointers to the first object. The three ways of passing arrays are as follows:
+ * treated as pointers to the first object. The three ways of passing arrays are 
+as follows:
  * 
  * print_array_elements(const string *arr);
  * print_array_elements(const string *arr[]);
@@ -209,3 +212,25 @@ void array_argument_function_3(const int ptr_arg[], size_t size)
     cout << ptr_arg[i] << endl;
   }
 }
+
+/*
+ * Demonstrates returning list initialized values.
+ */
+vector<string> returning_lists(bool empty)
+{
+    
+    if(empty)
+    {
+    
+        return {};
+   
+    }
+    else
+    {
+        
+        return { "Not", "Empty" };
+        
+    }
+    
+}
+
