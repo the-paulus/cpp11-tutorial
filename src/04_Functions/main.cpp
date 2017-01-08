@@ -29,7 +29,7 @@ using std::string;
  * function is done all local objects are freed. 
  */
 
-#include "functions.hpp"
+#include "01_simple_functions.hpp"
 
 static int ctr;
 
