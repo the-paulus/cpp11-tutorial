@@ -10,4 +10,6 @@
  */
 int *return_array_function(int *ai, int size, int increment);
 
+auto populate_array_function(int i) -> int;
+
 #endif

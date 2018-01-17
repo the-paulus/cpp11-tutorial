@@ -2,9 +2,6 @@
 
 #include "05_retarr_functions.hpp"
 
-using std::cout;
-using std::endl;
-
 int *return_array_function(int *ai, int size, int increment)
 {
   
@@ -13,7 +10,7 @@ int *return_array_function(int *ai, int size, int increment)
   for(int i = 0; i < size; i++)
   {
     /*
-     * Dereference the variable so we can set a new value for it. Equivilent to:
+     * Deference the variable so we can set a new value for it. Equivalent to:
      * ai[i] = ai[i] + increment;
      */
     *(tai+i) = *(tai+i)+increment;
@@ -26,3 +23,4 @@ int *return_array_function(int *ai, int size, int increment)
    */
   return tai;
 }
+
