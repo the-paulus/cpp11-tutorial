@@ -26,17 +26,22 @@ using std::string;
  * 
  * There is a way around this an object can be declared as static, which causes 
  * its value to persist after the function is done executing. Typically when a 
- * function is done all local objects are freed. 
+ * function is done all local objects are freed.
+ *
+ * Functions can return an object specified by what is placed infront of the
+ * function name. In certain instances, functions may not return anything
+ * at all, which is specified by the 'void' keyword.
  */
 
 #include "01_simple_functions.hpp"
 
+/*
+ * The static keyword tells the compiler that the object's value should
+ * persist after the function has finished executing. Static objects
+ * remain in memory until the program exists.
+ */
 static int ctr;
 
-/*
- * The static keyword tells the compiler that the object's value should 
- * persist after the function has finished executing.
- */
 void count_times_called()
 {
   
