@@ -31,6 +31,9 @@ using std::string;
  * Functions can return an object specified by what is placed infront of the
  * function name. In certain instances, functions may not return anything
  * at all, which is specified by the 'void' keyword.
+ *
+ * Functions must be declared before using them but not defined. If they are
+ * used then the function must be defined.
  */
 
 #include "01_simple_functions.hpp"
