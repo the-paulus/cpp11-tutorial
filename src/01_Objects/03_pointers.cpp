@@ -49,7 +49,7 @@ int main(int argc, char **argv) {
      * Indirectly assigning ival a new value -- this can also be achieved by 
      * using references (see 02_refernces.cpp). Pointers of a specified 
      * type must point to objects of the same type, just like references.
-     * The assignment illistrated below will fail because 20 isn't an
+     * The assignment illustrated below will fail because 20 isn't an
      * address. 
      * 
      * ptr_ival = 20; 
@@ -96,11 +96,14 @@ int main(int argc, char **argv) {
     cout << endl << endl;
     
     /*
-     * There is a special kind of pointer that holds only addresses. In the
-     * statement below, we are assigning the address of the object ival to
-     * the void pointer. Void pointers do not have a type and therefore cannot
-     * be dereferenced. However, they can be cast to retrieve the value stored
-     * at that address.
+     * There is a special kind of pointer that can hold addresses of any object.
+     * In the statement below, we are assigning the address of the object ival to
+     * the void pointer. There is a limited number of actions that can be performed
+     * on a void pointer.
+     * - Pass it to or return from a function.
+     * - assign it to another void pointer.
+     * void pointers cannot be used to perform operations on objects because the
+     * type of the object is unknown.
      */
     void *vptr_ival = &ival;
     int *ptr_vptr_ival = static_cast<int*>(vptr_ival);
