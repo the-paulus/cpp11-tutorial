@@ -27,19 +27,19 @@ int main(int argc, char **argv)
   type_names[std::type_index(typeid(long double))] = "Long Double";
   
   /*
-   * Type		Meaning			Guaranteed Size in bits
+   * Type		    Meaning			    Guaranteed Size in bits
    * ==========================================================
-   * bool		boolean			1
-   * char		character		8
+   * bool		    boolean			    1
+   * char		    character		    8
    * wchar_t		wide character		16
    * char16_t		unicode character	16
    * char32_t		unicode character	32
-   * short		short integer		16
-   * integer		integer			16
-   * long		long integer		32
+   * short		    short integer		16
+   * integer		integer			    16
+   * long		    long integer		32
    * long long		long integer		64
-   * float		single-precesion	6 significant digits.
-   * double		double-precision	10
+   * float		    single-precesion	6 significant digits.
+   * double		    double-precision	10
    * long double	extended precision	10
    * 
    * Any of the built-in data types may have a type modifier of either signed
@@ -105,7 +105,7 @@ int main(int argc, char **argv)
    * ========================
    * - Always use the unsigned type modifier if the value cannot be negative.
    * - Use the same type when doing arthmetic.
-   * - Depending on the archeticure, int and long are the same length.
+   * - Depending on the architecture, int and long are the same length.
    * - When dealing with large numbers use long long.
    * - Don't use char or bool in arithmetic expressions.
    * - Char can be either signed or unsigned depending on the archeticure.
