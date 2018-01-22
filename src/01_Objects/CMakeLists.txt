@@ -15,5 +15,8 @@
 #                     construction of the executable.
 add_executable(builtin_types 01_builtin_types.cpp)
 add_executable(references 02_references.cpp)
+add_executable(pointers 03_pointers.cpp)
+add_executable(arrays 04_arrays.cpp)
 
 set_property(TARGET builtin_types PROPERTY CXX_STANDARD 11)
+set_property(TARGET arrays PROPERTY CXX_STANDARD 11)
