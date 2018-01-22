@@ -21,6 +21,10 @@ cmake_minimum_required(VERSION 2.6)
 #
 project(cpp11-tutorial)
 
+set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
+set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
+
 # The add_subdirectory command specifies a directory in which a CMakeLists.txt 
 # file can be found along with additional code files. The
 # only required parameter of the add_subdirectory command is the src_directory:
@@ -40,10 +44,10 @@ project(cpp11-tutorial)
 # The subdirectory's CMakeLists.txt typically includes a call to the project 
 # command in order to facilitate a full build system to be generated within the
 # specified directory. 
-add_subdirectory(src/01_Objects bin)
-add_subdirectory(src/02_Statements bin)
-add_subdirectory(src/03_Exceptions bin)
-add_subdirectory(src/04_Functions bin)
+add_subdirectory(src/01_Objects)
+add_subdirectory(src/02_Statements)
+add_subdirectory(src/03_Exceptions)
+add_subdirectory(src/04_Functions)
 
 # The set_property command takes three options. The first option is the scope
 # in which this property applies to. The scope of the property must be one
