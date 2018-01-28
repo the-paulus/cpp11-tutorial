@@ -21,6 +21,8 @@ void simple_void_function1()
 /*
  * This is another way to define a function that doesn't return anything nor 
  * does it accept any arguments.
+ *
+ * Using the keyword "void" maintains compatibility with C.
  */
 void simple_void_function2(void)
 {
