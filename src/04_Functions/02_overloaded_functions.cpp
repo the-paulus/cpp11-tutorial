@@ -1,8 +1,5 @@
 #include <cstdarg>
 #include <iostream>
-#include <string>
-#include <typeindex>
-#include <typeinfo>
 
 #include "02_overloaded_functions.hpp"
 
@@ -120,4 +117,25 @@ void elipsis_function(const int count, ...)
      * another va_start or va_copy call, the behavior is undefinned.
      */
     va_end(l);
+}
+
+
+const char* print_parameter_type(int param)
+{
+    return typeid(param).name();
+}
+
+const char* print_parameter_type(string param)
+{
+    return typeid(param).name();
+}
+
+const char* print_parameter_type(float param)
+{
+    return typeid(param).name();
+}
+
+const char* print_parameter_type(double param, int dparam)
+{
+    return string(string(typeid(param).name()) + " " + string(typeid(dparam).name())).data();
 }
