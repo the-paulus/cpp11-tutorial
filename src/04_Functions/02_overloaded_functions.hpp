@@ -3,6 +3,7 @@
 
 #include <string>
 #include <initializer_list>
+#include <typeinfo>
 
 using std::initializer_list;
 using std::string;
@@ -21,8 +22,16 @@ using std::string;
  * func(int i=0, int j, int k);
  * 
  * Unless there is a very good reason to declare the function's default 
- * parameters with multiple statements you should avoid it.
- * 
+ * parameters with multiple statements you should avoid it. As mentioned
+ * above default parameters can only be declared once, meaning the
+ * following is invalid:
+ *
+ * void setSize(int width, int height = 80);
+ *
+ * void setSize(int width, int height = 80)
+ * {
+ *  // ...
+ * }
  */
 void setSize(int width, int height = 80);
 void setSize(int width = 60, int height);
