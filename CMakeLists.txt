@@ -47,7 +47,9 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 add_subdirectory(src/01_Objects)
 add_subdirectory(src/02_Statements)
 add_subdirectory(src/03_Exceptions)
-add_subdirectory(src/04_Functions)
+add_subdirectory(src/04_Functions/06_Pointer_Functions)
+
+add_executable(debugging src/debugging.cpp)
 
 # The set_property command takes three options. The first option is the scope
 # in which this property applies to. The scope of the property must be one
