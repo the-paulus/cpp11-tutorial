@@ -112,7 +112,7 @@ void elipsis_function(const int count, ...)
         
     }
     
-    /* 
+    /*
      * Cleans up the va_list object. If this is not called before 
      * another va_start or va_copy call, the behavior is undefinned.
      */
@@ -121,6 +121,11 @@ void elipsis_function(const int count, ...)
 
 
 const char* print_parameter_type(int param)
+{
+    return typeid(param).name();
+}
+
+const char* print_parameter_type(short param)
 {
     return typeid(param).name();
 }

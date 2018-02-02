@@ -65,6 +65,7 @@ void elipsis_function(const int count, ...);
 
 
 const char* print_parameter_type(int param);
+const char* print_parameter_type(short param);
 const char* print_parameter_type(string param);
 const char* print_parameter_type(float param);
 const char* print_parameter_type(double param, int dparam = 1);
