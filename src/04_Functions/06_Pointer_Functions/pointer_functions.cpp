@@ -21,3 +21,22 @@ string getLargerString(const string &str1, const string &str2, bool pf(const str
 {
     return pf(str1, str2) ? str1 : str2;
 }
+
+bool function_pointer_t1(const string &str1, const string &str2, func_t1 f)
+{
+    return f(str1, str2);
+}
+
+bool function_pointer_t2(const string &str1, const string &str2, func_t2 f)
+{
+    return f(str1, str2);
+}
+bool function_pointer_t3(const string &str1, const string &str2, func_t3 f)
+{
+    return f(str1, str2);
+}
+
+bool function_pointer_t4(const string &str1, const string &str2, func_t4 f)
+{
+    return f(str1, str2);
+}

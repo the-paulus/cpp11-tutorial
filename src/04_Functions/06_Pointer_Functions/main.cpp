@@ -33,17 +33,12 @@ int main(int argv, char *argc[])
 
     cout << getLargerString(string("larger string"), string("string"), compareString) << endl;
 
+    cout << function_pointer_t1(string("string1"), string("another string"), compareString) << endl;
+    cout << function_pointer_t2(string("string1"), string("another string"), compareString) << endl;
+    cout << function_pointer_t3(string("string1"), string("another string"), compareString) << endl;
+    cout << function_pointer_t4(string("string1"), string("another string"), compareString) << endl;
 
-
-    func_t1 fp_td_1;
-    /*fp_td_1 = compareString;
-    fp_td_1(string("larger"), string("smaller"));
-    func_t2 fp_td_2 = compareString;
-    fp_td_2(string("really big"), string("small"));
-    fp_t1 fp_td_3 = compareString;
-    fp_td_3(string("one"), string("two"));
-    fp_t2 fp_td_4 = compareString;
-    fp_t2(string("hi"), string("bye"));*/
-
+    func_t1 (*pft) = compareString;
+    pft("one", "two");
     return 0;
 }
