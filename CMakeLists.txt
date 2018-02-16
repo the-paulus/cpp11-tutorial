@@ -48,6 +48,7 @@ add_subdirectory(src/01_Objects)
 add_subdirectory(src/02_Statements)
 add_subdirectory(src/03_Exceptions)
 add_subdirectory(src/04_Functions/06_Pointer_Functions)
+add_subdirectory(src/05_Classes/01_Struct)
 
 add_executable(debugging src/debugging.cpp)
 
