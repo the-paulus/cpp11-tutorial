@@ -1,24 +1,11 @@
+# Classes
 Classes are used to define new data types. There are two ways of defining classes, the first is using `struct` and 
 the other is using `class`. The biggest difference between the two is that `struct` will default all objects and 
 functions to public while a `class` has the default of private. 
 
-## Struct
-The majority of the time `struct` is used to define plain old data types. `struct` offers compatibility with C, which 
-may be of importantance. To define a class and it's methods using the `struct` keyword: 
-```
-struct Product {
-    std::string name;
-    std::string description;
-    std::string identifier;
-    unsigned int qty = 0;
-    double price = 0.0;
-    double ext_price() const; 
-};
+1. [struct](Struct.md)
 
-double Product::ext_price() const {
-    return (this->price * this->qty);
-}
-```
+
 
 ## Constructors
 The job of a constructor is to initialize the newly created object with data rather than having to call or set data 
@@ -280,7 +267,6 @@ public:
 Window new_window;
 new_window.clear();
 ```
-
 
 ### Type Member
 Classes can define their own local names for types which are subject to the same access control rules as any other 
