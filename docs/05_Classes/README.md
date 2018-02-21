@@ -14,7 +14,6 @@ functions to public while a `class` has the default of private.
     1. [Inline Member Functions](MemberFunctions.md#inline-member-functions)
     2. [Overloaded Member Functions](MemberFunctions.md#overloaded-member-functions)
     3. [Returning this](MemberFunctions.md#returning-this)
+    4. [Out of Scope Members](MemberFunctions.md#out-of-scope-members)
 6. [Friends](Friends.md)
     1. [Friendscope](Friends.md#friendscope)
-   
-

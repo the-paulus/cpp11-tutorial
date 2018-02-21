@@ -110,3 +110,35 @@ Window Window::move(position_t position) {
 Window w = new Window();
 Window tmp = w.move(pos);
 ```
+
+## Out of Scope Members
+Since a class is a scope, we must provide the class name in addition to the function when defining a member function 
+outside of the class since the names of its members are hidden. After providing the scope, or name of the class, using 
+class members is possible without qualification (`::`).
+
+```
+// Window.hpp
+class Window {
+public:
+    typedef unsigned long window_id;
+    window_id getWindowID();
+    void setWindowID(window_id id);
+    // ....
+private:
+    window_id window_id;
+}
+
+// Window.cpp
+#include "Window.hpp"
+
+Window::window_id Window::getWindowID() {
+    return this->window_id;
+}
+
+void Window::setWindowID(Window::window_id id) {
+    this->window_id = id;
+}
+```
+Since we provided the scope, `Window::`, we do not have to type `Window::window_id` to specify the object's type. 
+When defining the `getWindowID` function, which returns a `window_id` object, we must specify the scope because the 
+return. This is still the case with the `Window::getWindowID` functions because the return type is outside the scope.
