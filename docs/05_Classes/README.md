@@ -24,3 +24,4 @@ functions to public while a `class` has the default of private.
     5. [Block-Scope within Member Definitions](MemberFunctions.md#block-scope-within-member-definitions)
 6. [Friends](Friends.md)
     1. [Friendscope](Friends.md#friendscope)
+7. [Classs Conversion](Conversion.md)
