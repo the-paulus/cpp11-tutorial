@@ -34,6 +34,43 @@ When creating constructors and the default constructor does the same thing as a 
 can be defined as `Sale() = default`. In order to use the `= default` all data members with a built-in type must be 
 initialized.
 
+The default constructor is used whenever an object is default or value initialized. Default initialization happens when
+
+- objects are defined as non`static` at block scope without initializers. 
+- a class itself has data members of class type using the sythesized default constructor.
+- members of a class type are not explicitly initialized in a constructor initializer list.
+
+Value initialization happens when
+
+- arrays are initialized with fewer elements than the size of the array.
+- local static objects are defined without an initializer.
+- value initialization is explicitly requested by writing an expression in the form of `T()` -- where *T* is the type, 
+e.g., `Vector();`
+
+Class types defined using the `class` keyword at least has a synthesized constructor or one explicit constructor. 
+`struct` classes must have a constructor explicitly defined because one cannot be synthesized for them.
+
+```
+class Product {
+public:
+    Product(string &identifier, string &name, string &description, double price);
+    // ...
+};
+
+struct LineItem {
+    Product product; // Default synthesized constructor is used.
+    // ...
+};
+
+LineItem item; // Error: No constructor was synthesized or explicitly defined.
+
+struct Customer {
+    Customer() {}; // Error: no initializer for first and last names.
+    string first_name;
+    string last_name;
+};
+```
+
 ## Constructor Initializer Lists
 Creating constructors that's only job is to initialize data members can be done using in-class initializers. That is
 providing that the compiler being used supports it. 
