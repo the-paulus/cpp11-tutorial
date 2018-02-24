@@ -15,6 +15,7 @@ functions to public while a `class` has the default of private.
     2. [Constructor Initializer Lists](Constructors.md#constructor-initializer-lists)
     3. [When Initialization is Required](Constructors.md#when-initialization-is-required)
     4. [Default Arguments](Constructors.md#default-arguments)
+    5. [Delegating Constructors](Constructors.md#delegating-constructors)
 5. [Member Functions](MemberFunctions.md)
     1. [Inline Member Functions](MemberFunctions.md#inline-member-functions)
     2. [Overloaded Member Functions](MemberFunctions.md#overloaded-member-functions)

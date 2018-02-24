@@ -115,3 +115,17 @@ public:
     // ...
 };
 ``` 
+
+## Delegating Constructors
+In C++11, the ability to use **delegating constructors** is available. When using **delegating constructors** the 
+initialization list is reduced to a single entry.
+
+```
+class Window {
+public:
+    // Nondelegating constructor -- one that initializes all data members.
+    Window(position_t position, dimensions_t dimensions, string content) : position(position), dimensions(dimensions), content(content) {};
+    // Delegating constructors
+    Window(position_t position) : Window(position, WindowManager::default_dimensions, "") {};
+    Window(position_t position, dimensions_t dimensions) : Window(position, dimensions, "") {};
+```
