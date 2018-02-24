@@ -60,6 +60,46 @@ Product::Product(const string &pn) {
     name = pn;
 }
 ```  
+
 In the first constructor declaration, you will notice that there is no initializer list. It isn't that there is not one, 
 but that the initializer list is empty. Members that do not appear in the constructor initializer list are initialized 
-by the corresponding in-class intializer, providing there is one, or default initialized. 
+by the corresponding in-class initializer, providing there is one, or default initialized. 
+
+## When Initialization is Required
+Most of the time initialization is not required but it is required when there are data members that are `const` or
+references. Example:
+
+```
+Class Screen {
+public: 
+    // This will not work
+    Screen(video_card_t video_card, WindowManager &window_manager) { this->video_card = video_card; this->window_manager = window_manager; };
+    // This will
+    Screen(video_card_t video_card, WindowManager &window_manager) : video_card(video_card), window_manager(window_manager) {};
+private: 
+    WindowManager &window_manager;
+    const video_card_t video_card;
+}
+``` 
+
+Since `const`s and references need to be initialized, the first `Screen` constructor will not work because by the time the 
+body of the function begins executing, the initialization phase is complete.
+
+## Member Initialization Order
+When initializing data members, the order in which those objects are initialized are not the order they appear in the 
+initialization list. For the most part, the order in which data members are initialized doesn't matter but if one 
+depends on another then the definition order of the class data members becomes critical.
+
+```
+Class Screen {
+public: 
+    Screen(video_card_t video_card, WindowManager &window_manager) : video_card(video_card), window_manager(window_manager) {};
+private: 
+    WindowManager &window_manager;
+    position_t position;
+    const video_card_t video_card;
+    dimensions_t dimensions;
+}
+```
+Although the order of the data members in the initialization list is video_card followed by window_manager, window_manager 
+gets initialized first because of the order in they are defined within the class. 
