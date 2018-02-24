@@ -139,6 +139,36 @@ void Window::setWindowID(Window::window_id id) {
     this->window_id = id;
 }
 ```
+
 Since we provided the scope, `Window::`, we do not have to type `Window::window_id` to specify the object's type. 
 When defining the `getWindowID` function, which returns a `window_id` object, we must specify the scope because the 
 return. This is still the case with the `Window::getWindowID` functions because the return type is outside the scope.
+
+## Block-Scope within Member Definitions
+When using a name within the body of a member function the resolution process takes the following steps:
+1. Look for a declaratoin of the name inside the member function's body.
+2. When no declaration is found within the member function body, look for the declaration inside the class.
+3. If the declaration is still not found, then look in the global scope.
+
+It is consider *bad practice* to use the same name for both a parameter and data member.
+```
+class Window {
+public:
+    // ...
+    void setContent(string content) { content = content; }
+    void setPosition(position_t position) { this->position = position; }
+    void setWindowID(window_id_t window_id) { ::window_id = window_id; }
+    void setDimensions(dimensions_t dms) { dimensions = dms; }
+    // ...
+private:
+    window_id_t window_id;
+    string content;
+    position_t position;
+    diemensions_t diemensions;
+}
+```
+
+When the `setContent` function is called, the value passed in through the parameter, is reassigned to the parameter. 
+The `setPosition` function works as it should, in that a new position is assigned to the window properly. In the 
+`setWindowID` function, instead of using `this`, we use the scope operator (`::`). To be a good programmer, name the 
+parameter something other than a data member as demonstrated in `setDimensions`. 
