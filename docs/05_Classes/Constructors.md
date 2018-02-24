@@ -102,4 +102,16 @@ private:
 }
 ```
 Although the order of the data members in the initialization list is video_card followed by window_manager, window_manager 
-gets initialized first because of the order in they are defined within the class. 
+gets initialized first because of the order in they are defined within the class.
+
+## Default Arguments
+Constructors can have some or all of its parameters be assigned default values.
+
+```
+class Window {
+public:
+    // ...
+    Window(position_t position, string content = "") : position(position), content(content) {};
+    // ...
+};
+``` 
