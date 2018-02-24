@@ -4,6 +4,7 @@ the other is using `class`. The biggest difference between the two is that `stru
 functions to public while a `class` has the default of private. 
 
 1. [struct](Struct.md)
+    1. [Aggregate Classes](Struct.md#aggregate-classes)
 2. [class](Class.md)
 3. [Data Members](DataMembers.md)
     1. [Class Type Data Member Initialization](DataMembers.md#class-type-data-member-initialization)
