@@ -17,6 +17,16 @@ Using the `mutable` keyword, indicates that the data member can be modified rega
 member function.
 
 ```
+class Screen {
+public:
+    void const_function() const;
+private:
+    mutable unsigned long ctr = 0;
+}
+
+void Screen::const_function() const {
+    ctr++;
+}
 ```
 
 ## Type Members
