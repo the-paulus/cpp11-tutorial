@@ -1,7 +1,7 @@
 # Constructors
 The job of a constructor is to initialize the newly created object with data rather than having to call or set data 
-members. A constructor is a function that doesn't have a return type nor can it be declared as const. It doesn't need 
-to have any parameters just like a normal one. By default, when a class is defined without explicitly naming a 
+members. A constructor is a function that doesn't have a return type nor can it be declared as `const`. It doesn't need 
+to have any parameters just like a normal function. By default, when a class is defined without explicitly naming a 
 constructor, the compiler will add a **default constructor** that takes no arguments. The compiler-generated constructor 
 is called a **synthesized default constructor**. The following class definition has a synthesized default constructor 
 assigned to it.
@@ -23,7 +23,7 @@ struct Sale {
 It's important to know that if there are any constructors defined, then the compiler will not define a synthesized 
 default constructor.
 
-When dealing with objects of built-in or compound types are undefined and must either be default initialized or asigned 
+When dealing with objects of built-in or compound types, they are undefined and must either be default initialized or asigned 
 a value right off the bat.
 
 Classes that have members of a class type may not have a default constructor. Therefore the compiler cannot initialize 
@@ -36,7 +36,7 @@ initialized.
 
 The default constructor is used whenever an object is default or value initialized. Default initialization happens when
 
-- objects are defined as non`static` at block scope without initializers. 
+- objects are defined as non`static` within the block scope without initializers. 
 - a class itself has data members of class type using the sythesized default constructor.
 - members of a class type are not explicitly initialized in a constructor initializer list.
 
@@ -45,7 +45,7 @@ Value initialization happens when
 - arrays are initialized with fewer elements than the size of the array.
 - local static objects are defined without an initializer.
 - value initialization is explicitly requested by writing an expression in the form of `T()` -- where *T* is the type, 
-e.g., `Vector();`
+e.g., `Vector<T>();`
 
 Class types defined using the `class` keyword at least has a synthesized constructor or one explicit constructor. 
 `struct` classes must have a constructor explicitly defined because one cannot be synthesized for them.
@@ -53,6 +53,7 @@ Class types defined using the `class` keyword at least has a synthesized constru
 ```
 class Product {
 public:
+    Product() = default;
     Product(string &identifier, string &name, string &description, double price);
     // ...
 };
@@ -66,7 +67,7 @@ LineItem item; // Error: No constructor was synthesized or explicitly defined.
 
 struct Customer {
     Customer() {}; // Error: no initializer for first and last names.
-    string first_name;
+    string first_name; 
     string last_name;
 };
 ```
