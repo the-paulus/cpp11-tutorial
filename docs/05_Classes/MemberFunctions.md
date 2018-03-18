@@ -172,3 +172,36 @@ When the `setContent` function is called, the value passed in through the parame
 The `setPosition` function works as it should, in that a new position is assigned to the window properly. In the 
 `setWindowID` function, instead of using `this`, we use the scope operator (`::`). To be a good programmer, name the 
 parameter something other than a data member as demonstrated in `setDimensions`. 
+
+## `static` Class Member Functions
+When functions provide functionality to all objects of a particular class rather than individual objects, they can be 
+declared as `static`.
+
+```
+class WindowManager {
+public:
+    static unsigned long GetScreenCount() 
+    // Other member functions can access static members without using the scope operator (::)
+    void printScreenCount() { cout << GetScreenCount() << endl; }
+     // ....
+};
+
+// The static keyword only appears when declaring the function.
+unsigned long WindowManager::GetScreenCount() { return this->screens.length; }
+
+unsigned long screen_count = WindowManager::GetScreenCount(); // accessing a static member through the scope operator.
+```
+
+Any function or data member declared as `static` exists outside of any object and do not contain any data associated with 
+`static` data members. Member functions defined in this manner are not bound to any object and therefore they do not have 
+a `this` pointer which also means they cannot be declared as `const`.
+
+Even though `static` members exist outside of any object, objects that are defined by the class type containing a `static` 
+member may still access it.
+
+```
+WindowManager wm;
+WindowManager *wm2 = &wm;
+cout << wm.GetScreenCount() << endl;
+cout << wm2->GetScreenCount() << endl;
+```

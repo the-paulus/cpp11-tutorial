@@ -24,6 +24,7 @@ functions to public while a `class` has the default of private.
     3. [Returning this](MemberFunctions.md#returning-this)
     4. [Out of Scope Members](MemberFunctions.md#out-of-scope-members)
     5. [Block-Scope within Member Definitions](MemberFunctions.md#block-scope-within-member-definitions)
+    6. [`static` Class Member Functions](MemberFunctions.md#static-class-member-functions)
 6. [Friends](Friends.md)
     1. [Friendscope](Friends.md#friendscope)
 7. [Classs Conversion](Conversion.md)
