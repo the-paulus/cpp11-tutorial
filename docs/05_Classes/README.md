@@ -6,6 +6,7 @@ functions to public while a `class` has the default of private.
 1. [struct](Struct.md)
     1. [Aggregate Classes](Struct.md#aggregate-classes)
 2. [class](Class.md)
+    1. [Literal Classes](Class.md#literal-classes)
 3. [Data Members](DataMembers.md)
     1. [Class Type Data Member Initialization](DataMembers.md#class-type-data-member-initialization)
     2. [mutable Data Members](DataMembers.md#mutable-data-members)

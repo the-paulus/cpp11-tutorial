@@ -27,3 +27,18 @@ private:
     Product *products = nullptr;
 };
 ```
+
+## Literal Classes
+Functions that return a `constexpr` must have its parameters and return type be literal types. Some classes may be 
+considered a literal type, in addition to arithmetic types, references, and pointers. One distinction of a normal class
+and a literal class is that they may have function members that are `constexpr`. Those members need to meet the 
+requirements of a `constexpr` function and will are implicitly `const`.
+
+Aggregate classes that has only literal type data members is a literal class. Nonaggregate classes must meet the 
+following criteria in order to be a literal class:
+
+- Data members are all literal types.
+- Class must have at least one `constexpr` constructor.
+- Data members that have an in-class initializer, the initializer for that member that is a built-in type must be a
+`constexpr`. If the member is a class type, the initializer must use the member's own `constexpr` constructor.
+- The destructor that is used to destroy objects of the class type must be the default.
