@@ -21,7 +21,7 @@ class Screen {
 public:
     void const_function() const;
 private:
-    mutable size_t access_ctr;
+    mutable unsigned long access_ctr;
 };
 
 void Screen::const_function() const
