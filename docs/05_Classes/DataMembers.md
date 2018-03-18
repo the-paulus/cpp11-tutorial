@@ -93,3 +93,38 @@ public:
     // ...
 }
 ```  
+
+## static data members
+Any static members will exist as long as the program is running since they belong in the global scope. When working 
+with `static` data members, they are not defined when objects are created and do not get initialized. Initializing a 
+static member must be done outside the body of the class. The exception is that if the `static` members have a 
+`const`integral type and for `static` members that are `constexpr` of literal type.
+
+```
+class Sale {
+// ...
+private:
+    static constexpr unsigned int sales_tax = 51; 
+// ...
+};
+
+// Good practice to define the member outside of the class. Since it was already initialized, it is not done again.
+constexpr unsigned double Sale::sales_tax;
+```  
+
+Two things to add about `static` data members is that they can have incomplete types and can be used as default values.
+These two things are illegal for non`static` data members.
+
+```
+class Sale {
+public:
+    Sale(tax = sales_tax); // static member as default parameter value is OK.
+    // ...
+private:
+    static const unsigned int sales_tax;
+    static Customer customer; // static members can have incomplete type.
+    Item *items; // pointer member can have incomplete type.
+    Item first_item; // error, data member must have a complete type.
+    // ...
+}
+``` 

@@ -11,6 +11,7 @@ functions to public while a `class` has the default of private.
     2. [mutable Data Members](DataMembers.md#mutable-data-members)
     3. [Type Members](DataMembers.md#type-members)
     4. [Name Lookup and Class Scope](DataMembers.md#name-lookup-and-class-scope)
+    5. [static Data Members](DataMembers.md#static-data-members)
 4. [Constructors](Constructors.md)
     1. [Default Constructor](Constructors.md#default-constructor)
     2. [Constructor Initializer Lists](Constructors.md#constructor-initializer-lists)
