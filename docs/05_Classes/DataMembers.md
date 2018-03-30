@@ -50,7 +50,7 @@ private:
 Another way to define a type member is by implementing the `using` keyword.
 
 ```
-using pos = std::string::size_type;
+using WINDOW_ID = const Window *;
 ```
 
 After defining new member types, they can be used in other sections of the program.
@@ -60,9 +60,6 @@ After defining new member types, they can be used in other sections of the progr
 #include "WindowManager.hpp"
 
 WindowManager::dimensions_t dimensions;
-
-using WindowManager::dimensions_t;
-dimensions_t dimensions;
 ```
 
 ## Name Lookup and Class Scope
