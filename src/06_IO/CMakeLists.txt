@@ -1,0 +1,2 @@
+add_executable(iostate 01_iostate.cpp)
+add_executable(output_buffer 02_output_buffer.cpp)
