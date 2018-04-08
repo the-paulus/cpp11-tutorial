@@ -4,7 +4,7 @@
 2. [Output Buffer](Output-Buffer.md)
     1. [Flushing the Output Buffer](Output-Buffer.md#flushing-the-output-buffer)
     2. [Tying Input and Output Streams Together](Output-Buffer.md#tying-input-and-output-streams-together)
-
+3. [File Input and Output](File-Input-Output.md)
 ---
 
 ## IO Classes
