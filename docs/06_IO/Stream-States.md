@@ -19,7 +19,7 @@ machine-dependent integral type `iostate` that contains information about the st
 |*strm*::`goodbit`|Indicates that the stream is good and guarenteed to be zero.|
 |`bad()`|Returns the value of the `badbit` (`true` or `false`)|
 |`eof()`|Returns the value of the `eofbit` (`true` or `false`)|
-|`fail()`|Returns the value of the `failbit` (`true` or `false`)|
+|`fail()`|Returns the value of the `failbit` (`true` or `false`). When using `fstream` objects, if a file cannot be opened, this bit is set.|
 |`good()`|Returns the value of the `goodbit` (`true` or `false`)|
 |`clear(iostate flags)`|Returns void, resets the bits on the stream when no parameter is passed. When used with a parameter, the bits specified are reset.|
 |`setstate(iostate flags)`|Adds specified conditions to the stream. Returns `void`|
