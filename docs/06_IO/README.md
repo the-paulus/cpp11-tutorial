@@ -1,10 +1,13 @@
 # IO
 
-1. [Stream States](Stream-States.md)
-2. [Output Buffer](Output-Buffer.md)
+1. [Output Buffer](Output-Buffer.md)
     1. [Flushing the Output Buffer](Output-Buffer.md#flushing-the-output-buffer)
     2. [Tying Input and Output Streams Together](Output-Buffer.md#tying-input-and-output-streams-together)
-3. [File Input and Output](File-Input-Output.md)
+2. [Streams](Streams.md)
+    1. [Stream States](Streams.md#stream-states)
+    2. [File Streams](Streams.md#file-streams)
+    3. [File Modes](Streams.md#file-modes)
+
 ---
 
 ## IO Classes
