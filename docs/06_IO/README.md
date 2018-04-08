@@ -7,6 +7,7 @@
     1. [Stream States](Streams.md#stream-states)
     2. [File Streams](Streams.md#file-streams)
     3. [File Modes](Streams.md#file-modes)
+    4. [String Streams](Streams.md#string-streams)
 
 ---
 

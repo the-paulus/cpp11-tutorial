@@ -88,3 +88,10 @@ There are a total of six different file mode types between `ifstream` and `ofstr
 |binary|Do IO operations in binary mode. Can be used on either type of stream.|
 
 Files opened by `ifstream`, `ofstream`, or `fstraem` are opened by default in `in`, `out`, or both, respectively. 
+
+## String Streams
+The `sstream` header contains definitions for three types of objects that deal with in-memory IO; `istringstream` for reading strings, `ostringstream` for writing strings, and `stringstream` for both reading and writing strings. These streams can also be used in place of io and file streams. 
+
+String streams have two additional methods; `str()` for returning a copy of the string that a `stringstream` holds and `str(s)` for copying the value of s into the stream. 
+
+`istringstream`s are often used when working with lines or words while `ostringstream`s are used to build output before printing it. A use case for `stringstream` would be used when reading a file, while reading the file, we store valid text in a `ostringstream` before printing it. If the input is not valid then the generated output so far will be discarded.
