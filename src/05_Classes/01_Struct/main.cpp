@@ -5,8 +5,11 @@
 
 using namespace std;
 
-void print_menu()
+char print_menu()
 {
+    int choice = 0;
+
+    cout << "***** Main Menu *****" << endl;
     cout << "1. Add Product" << endl;
     cout << "2. Edit Product" << endl;
     cout << "3. Remove Product" << endl;
@@ -14,27 +17,38 @@ void print_menu()
     cout << "5. Complete Sale" << endl;
     cout << "6. Cancel Sale" << endl;
     cout << "[1-6]: ";
+
+    try {
+
+        cin >> choice;
+
+    } catch(const invalid_argument &invalid_argument_ex) {
+
+        cerr << "Input must be numeric." << endl;
+
+    }
+
+    if( choice < 1 && choice > 6 ) {
+
+        choice = 0;
+
+    }
+
+    return choice;
+
 }
 
 int main(int argc, char **argv) {
     Sale sale(cin);
     Product *product = nullptr;
-    string line;
-    char choice;
+    string line, input, choice;
     bool complete = false;
     unsigned int p_sel, pidx = 0;
-    print_menu();
 
-    while(getline(cin, line) && !complete) {
+    while( !complete ) {
 
-        if(line.empty()) {
-            choice = '0';
-        } else {
-            choice = line.at(0);
-        }
-
-        switch(choice) {
-            case '1':
+        switch(print_menu()) {
+            case 1:
                 cout << "***** Add Product *****" << endl;
                 product = new Product();
                 try {
@@ -46,7 +60,7 @@ int main(int argc, char **argv) {
                     cerr << "Input is out of range." << endl;
                 }
                 break;
-            case '2':
+            case 2:
                 cout << "Edit Product:" << endl << endl;
                 product = sale.products->first();
                 if(product == nullptr) {
@@ -71,7 +85,7 @@ int main(int argc, char **argv) {
                                 cout << "Description: ";
                                 cin >> input;
                                 product->description = input;
-                                
+
                                 break;
                             }
 
@@ -80,10 +94,10 @@ int main(int argc, char **argv) {
                     }
                 }
                 break;
-            case '3':
+            case 3:
                 cout << "Remove Product:" << endl;
                 break;
-            case '4':
+            case 4:
                 cout << "List Products:" << endl << endl;
                 product = sale.products->first();
                 while(product != nullptr) {
@@ -92,17 +106,16 @@ int main(int argc, char **argv) {
                     product = product->next;
                 }
                 break;
-            case '5':
+            case 5:
                 printReceipt(cout, sale);
                 cout << "Printing receipt..." << endl;
                 complete = true;
                 break;
-            case '6':
+            case 6:
                 complete = true;
                 break;
             default:
                 cout << "Invalid selection." << endl;
-                print_menu();
         }
     }
 }
