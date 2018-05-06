@@ -50,6 +50,7 @@ add_subdirectory(src/03_Exceptions)
 add_subdirectory(src/04_Functions/06_Pointer_Functions)
 add_subdirectory(src/05_Classes/01_Struct)
 add_subdirectory(src/05_Classes/02_Class)
+add_subdirectory(src/06_IO)
 
 add_executable(debugging src/debugging.cpp)
 
