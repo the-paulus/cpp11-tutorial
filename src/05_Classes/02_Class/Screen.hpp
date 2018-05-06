@@ -23,6 +23,8 @@ public:
     Screen &display(ostream &os, Window *win) { render(os, win); return *this; };
     const Screen &display(ostream &os, Window *win) const { render(os, win); return *this; };
     vector<Window*> getWindows() { return windows; };
+    void addWindow(Window* window);
+    void removeWindow(Window* window);
 
 private:
     WindowManager::cursor_t cursor;
