@@ -1,28 +1,39 @@
 #ifndef __WINDOW_HPP__
 #define __WINDOW_HPP__
 
+#include <iostream>
+
 #include "WindowManager.hpp"
 
-using WindowManager::dimensions_t;
-using WindowManager::position_t;
+using std::istream;
+using std::ostream;
+using std::string;
 
-extern ostream &writeToWindow(ostream &, Window &);
+//extern ostream &writeToWindow(ostream &, Window &);
 
 class Window {
 public:
-    friend ostream &writeToWindow(ostream &, Window &);
+    using WINDOW_ID = const Window *;
+
+    istream &writeToWindow(ostream &, Window &);
+    //ostream& display();
+    string display();
+
     Window() = default;
-    Window(position_t position, string content = "") : position(position), content(content) {};
-    Window(long x, long y, string content = "") : x(position.x), y(position.y), content(content) {};
-    Window(position_t position, dimensions_t dimensions) : position(position), dimensions(dimensions) {};
-    Window(long x, long y, unsigned long w, unsigned long h);
-    Window &moveWindow(position_t position);
-    Window &resizeWindow(dimensions_t dimensions);
+    Window(WindowManager::position_t position, WindowManager::dimensions_t dimensions, string &content) : position(position), dimensions(dimensions), content(content) {};
+    Window(long x, long y, unsigned long w, unsigned long h, string content);
+    WINDOW_ID getWindowID() const { return this; };
+    Window &move(WindowManager::position_t position);
+    WindowManager::position_t getPosition() { return position; };
+    Window &resize(WindowManager::dimensions_t dimensions);
+    WindowManager::dimensions_t getDimensions() { return dimensions; };
+
 
 private:
-    unsigned long wid = 0;
     string content;
-    dimensions_t dimensions;
-    position_t position;
+    WindowManager::dimensions_t dimensions;
+    WindowManager::position_t position;
 
 };
+
+#endif
