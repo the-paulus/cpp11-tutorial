@@ -65,32 +65,6 @@ to elements will allow the type of container to be easily changed.
 |`Container container(ia,ib);`|Creates a new container and copies the range of elements denoted by **ia** and **ib**, which are iterators. Note: This is not valid for `array`.|
 |`Container container{ca,cb,cc};`|List initialization.|
 
-|Assignment and swap||
-|:---|:---|
-|`container1 = container2;`|Assign c2 to c1.|
-|`container = {ca,cb,cc};`|Assign elements of ca, cb, and cc to c1. This does not work for `array`.|
-|`container.assign(ib,ie);`, `container.assign(initializer_list);`, `container.assign(n,v);`|Assigns the values in iterators ib, ie to container. Assigns the values in initializer_list to container. Replaces elements in container with *n* elements with value *v*.|
-|`ca.swap(cb);`|Swap the elements in ca with cb.|
-|`swap(ca,cb);`|Same as above.|
-
-|Size||
-|:---|:---|
-|`container.size();`|Retrieves the number of elements in the container. This is not valid for `forward_list`|
-|`container.max_size();`|Returns the maximum number of elements the container can hold.|
-|`container.empty();`|Whether or not the container is empty.|
-
-|Add/Remove Elements (not valid for `array`)||
-|:---|:---|
-|`container.insert(args);`|Copies the element(s), **args** into container.|
-|`container.emplace(inits);`|Use *inits* to construct an element in container.|
-|`container.erase(args);`|Remove the element(s) specified by **args**|
-|`container.clear();`|Remove all the elements in the container and return void.|
-
-|Equality and Relational Operators||
-|:---|:---|
-|`==`, `!=`|Valid for all container types.|
-|`<`, `<=`, `>`, `>=`|Relationals, not valid for unordered associative containers.|
-
 |Obtain Iterators||
 |:---|:---|
 |`container.begin();`, `container.end();`|Returns the iterator to the first element, one past the last element in the container.|
@@ -128,7 +102,6 @@ auto rit    = v.rbegin();   // vector<string>::reverse_iterator
 auto cit    = v.cbegin();   // vector<string>::const_iterator
 auto crit   = v.crbegin();  // vector<string>::const_reverse_iterator
 ```
-
 
 ## Iterators
 Iterators have a common interface which have the following standard operations:
@@ -170,4 +143,8 @@ array<int>::size_type j;
 - `array` is not defaulted to empty, the elements in the container is default initialized.
 - `array` works the same as built-in arrays for initiation.
 - Can assign or copy `array` unlike the built-in.
+
+## Adding Elements
+- `push_back` - applies to all containers but `array`s and `forward_list`s.
+- `push_front` - `list`, `forward_list`, and `deque`
 

@@ -1,0 +1,619 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="cpp11-tutorial"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="clang"/>
+		<Option virtualFolders="CMake Files\;CMake Files\src\;CMake Files\src\01_Objects\;CMake Files\src\02_Statements\;CMake Files\src\03_Exceptions\;CMake Files\src\04_Functions\;CMake Files\src\04_Functions\06_Pointer_Functions\;CMake Files\src\05_Classes\;CMake Files\src\05_Classes\01_Struct\;CMake Files\src\05_Classes\02_Class\;CMake Files\src\06_IO\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="debugging">
+				<Option output="/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/bin/debugging" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/Makefile&quot;  VERBOSE=1 debugging"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="debugging/fast">
+				<Option output="/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/bin/debugging" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/Makefile&quot;  VERBOSE=1 debugging/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="builtin_types">
+				<Option output="/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/bin/builtin_types" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/src/01_Objects/Makefile&quot;  VERBOSE=1 builtin_types"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/src/01_Objects/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/src/01_Objects/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/src/01_Objects/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="builtin_types/fast">
+				<Option output="/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/bin/builtin_types" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/src/01_Objects/Makefile&quot;  VERBOSE=1 builtin_types/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/src/01_Objects/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/src/01_Objects/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/src/01_Objects/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="pointers">
+				<Option output="/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/bin/pointers" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/src/01_Objects/Makefile&quot;  VERBOSE=1 pointers"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/src/01_Objects/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/src/01_Objects/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/src/01_Objects/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="pointers/fast">
+				<Option output="/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/bin/pointers" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/src/01_Objects/Makefile&quot;  VERBOSE=1 pointers/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/src/01_Objects/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/src/01_Objects/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/src/01_Objects/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="references">
+				<Option output="/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/bin/references" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/src/01_Objects/Makefile&quot;  VERBOSE=1 references"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/src/01_Objects/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/src/01_Objects/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/src/01_Objects/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="references/fast">
+				<Option output="/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/bin/references" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/src/01_Objects/Makefile&quot;  VERBOSE=1 references/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/src/01_Objects/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/src/01_Objects/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/src/01_Objects/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="arrays">
+				<Option output="/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/bin/arrays" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/src/01_Objects/Makefile&quot;  VERBOSE=1 arrays"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/src/01_Objects/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/src/01_Objects/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/src/01_Objects/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="arrays/fast">
+				<Option output="/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/bin/arrays" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/src/01_Objects/Makefile&quot;  VERBOSE=1 arrays/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/src/01_Objects/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/src/01_Objects/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/src/01_Objects/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="pointer_functions">
+				<Option output="/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/bin/pointer_functions" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/src/04_Functions/06_Pointer_Functions/Makefile&quot;  VERBOSE=1 pointer_functions"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/src/04_Functions/06_Pointer_Functions/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/src/04_Functions/06_Pointer_Functions/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/src/04_Functions/06_Pointer_Functions/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="pointer_functions/fast">
+				<Option output="/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/bin/pointer_functions" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/src/04_Functions/06_Pointer_Functions/Makefile&quot;  VERBOSE=1 pointer_functions/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/src/04_Functions/06_Pointer_Functions/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/src/04_Functions/06_Pointer_Functions/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/src/04_Functions/06_Pointer_Functions/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="struct">
+				<Option output="/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/bin/struct" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/src/05_Classes/01_Struct/Makefile&quot;  VERBOSE=1 struct"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/src/05_Classes/01_Struct/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/src/05_Classes/01_Struct/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/src/05_Classes/01_Struct/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="struct/fast">
+				<Option output="/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/bin/struct" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/src/05_Classes/01_Struct/Makefile&quot;  VERBOSE=1 struct/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/src/05_Classes/01_Struct/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/src/05_Classes/01_Struct/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/src/05_Classes/01_Struct/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="class">
+				<Option output="/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/bin/class" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/src/05_Classes/02_Class/Makefile&quot;  VERBOSE=1 class"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/src/05_Classes/02_Class/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/src/05_Classes/02_Class/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/src/05_Classes/02_Class/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="class/fast">
+				<Option output="/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/bin/class" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/src/05_Classes/02_Class/Makefile&quot;  VERBOSE=1 class/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/src/05_Classes/02_Class/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/src/05_Classes/02_Class/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/src/05_Classes/02_Class/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="file_io">
+				<Option output="/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/bin/file_io" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/src/06_IO/Makefile&quot;  VERBOSE=1 file_io"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/src/06_IO/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/src/06_IO/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/src/06_IO/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="file_io/fast">
+				<Option output="/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/bin/file_io" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/src/06_IO/Makefile&quot;  VERBOSE=1 file_io/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/src/06_IO/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/src/06_IO/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/src/06_IO/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="output_buffer">
+				<Option output="/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/bin/output_buffer" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/src/06_IO/Makefile&quot;  VERBOSE=1 output_buffer"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/src/06_IO/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/src/06_IO/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/src/06_IO/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="output_buffer/fast">
+				<Option output="/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/bin/output_buffer" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/src/06_IO/Makefile&quot;  VERBOSE=1 output_buffer/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/src/06_IO/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/src/06_IO/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/src/06_IO/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="iostate">
+				<Option output="/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/bin/iostate" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/src/06_IO/Makefile&quot;  VERBOSE=1 iostate"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/src/06_IO/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/src/06_IO/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/src/06_IO/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="iostate/fast">
+				<Option output="/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/bin/iostate" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/src/06_IO/Makefile&quot;  VERBOSE=1 iostate/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/src/06_IO/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/src/06_IO/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/src/06_IO/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/src/01_Objects/01_builtin_types.cpp">
+			<Option target="builtin_types"/>
+		</Unit>
+		<Unit filename="/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/src/01_Objects/02_references.cpp">
+			<Option target="references"/>
+		</Unit>
+		<Unit filename="/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/src/01_Objects/03_pointers.cpp">
+			<Option target="pointers"/>
+		</Unit>
+		<Unit filename="/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/src/01_Objects/04_arrays.cpp">
+			<Option target="arrays"/>
+		</Unit>
+		<Unit filename="/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/src/04_Functions/06_Pointer_Functions/main.cpp">
+			<Option target="pointer_functions"/>
+		</Unit>
+		<Unit filename="/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/src/04_Functions/06_Pointer_Functions/pointer_functions.cpp">
+			<Option target="pointer_functions"/>
+		</Unit>
+		<Unit filename="/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/src/04_Functions/06_Pointer_Functions/pointer_functions.hpp">
+			<Option target="pointer_functions"/>
+		</Unit>
+		<Unit filename="/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/src/05_Classes/01_Struct/main.cpp">
+			<Option target="struct"/>
+		</Unit>
+		<Unit filename="/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/src/05_Classes/01_Struct/product.cpp">
+			<Option target="struct"/>
+		</Unit>
+		<Unit filename="/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/src/05_Classes/01_Struct/product.hpp">
+			<Option target="struct"/>
+		</Unit>
+		<Unit filename="/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/src/05_Classes/01_Struct/sale.cpp">
+			<Option target="struct"/>
+		</Unit>
+		<Unit filename="/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/src/05_Classes/01_Struct/sale.hpp">
+			<Option target="struct"/>
+		</Unit>
+		<Unit filename="/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/src/05_Classes/02_Class/Screen.cpp">
+			<Option target="class"/>
+		</Unit>
+		<Unit filename="/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/src/05_Classes/02_Class/Screen.hpp">
+			<Option target="class"/>
+		</Unit>
+		<Unit filename="/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/src/05_Classes/02_Class/Window.cpp">
+			<Option target="class"/>
+		</Unit>
+		<Unit filename="/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/src/05_Classes/02_Class/Window.hpp">
+			<Option target="class"/>
+		</Unit>
+		<Unit filename="/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/src/05_Classes/02_Class/WindowManager.cpp">
+			<Option target="class"/>
+		</Unit>
+		<Unit filename="/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/src/05_Classes/02_Class/WindowManager.hpp">
+			<Option target="class"/>
+		</Unit>
+		<Unit filename="/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/src/05_Classes/02_Class/main.cpp">
+			<Option target="class"/>
+		</Unit>
+		<Unit filename="/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/src/06_IO/01_iostate.cpp">
+			<Option target="iostate"/>
+		</Unit>
+		<Unit filename="/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/src/06_IO/02_output_buffer.cpp">
+			<Option target="output_buffer"/>
+		</Unit>
+		<Unit filename="/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/src/06_IO/03_file_io.cpp">
+			<Option target="file_io"/>
+		</Unit>
+		<Unit filename="/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/src/debugging.cpp">
+			<Option target="debugging"/>
+		</Unit>
+		<Unit filename="/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/src/01_Objects/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\src\01_Objects\"/>
+		</Unit>
+		<Unit filename="/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/src/02_Statements/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\src\02_Statements\"/>
+		</Unit>
+		<Unit filename="/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/src/03_Exceptions/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\src\03_Exceptions\"/>
+		</Unit>
+		<Unit filename="/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/src/04_Functions/06_Pointer_Functions/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\src\04_Functions\06_Pointer_Functions\"/>
+		</Unit>
+		<Unit filename="/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/src/05_Classes/01_Struct/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\src\05_Classes\01_Struct\"/>
+		</Unit>
+		<Unit filename="/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/src/05_Classes/02_Class/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\src\05_Classes\02_Class\"/>
+		</Unit>
+		<Unit filename="/Users/paulus/Dropbox/Programs/C++/cpp11-tutorial_github/src/06_IO/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\src\06_IO\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

@@ -48,9 +48,10 @@ to elements will allow the type of container to be easily changed.
 
 ## Container Operations
 
+### Type Aliases
 |Type Aliases||
 |:---|:---|
-|`iterator`|Iterator type for the container|
+|`iterator`|Iterator type for the container|`
 |`const_iterator`|Read-only iterator|
 |`size_type`|Unsigned int type, big enough to hold the largest possible container of the type.|
 |`difference_type`|Signed integral type that is big enough to hold the distance between two iterators.|
@@ -58,16 +59,17 @@ to elements will allow the type of container to be easily changed.
 |`refernce`|Element's lvalue type which is a synonym for `value_type&`|
 |`const_reference`|Element's const lvalue type.|
 
+### Construction
 |Construction||
 |:---|:---|
 |`Container container;`|Default container constructor. Creates an empty container object.|
 |`Container container1(container2);`|Creates a new container and copies container2 into container1.|
-|`Container container{ca,cb,cc};`, `Container container = { ca, cb, cc };`|List initialization.|
+|`Container container{ca,cb,cc};`, `Container container = { ca, cb, cc };`|List initialization, introducing in C++11.|
 |`Container container(ia,ib);`|Creates a new container and copies the range of elements denoted by **ia** and **ib**, which are iterators. Note: This is not valid for `array`.|
 |`Container container(n);`|Creates a new sequential container with *n* elements. **Not valid for `array`**|
 |`Container container(n,v);`|Creates a new sequential container with *n* elements with *v* as their value. **Not valid for `array`**|
 
-Containers being created from a copy of another, the element type can differ as long as they can be converted.
+Containers can be created from a copy of another, the element type can differ as long as they can be converted.
 
 ```
 vector<string> first_names = { "Bob", "Ed", "Jo" };
@@ -77,3 +79,85 @@ vector<string> names(first_names); // Containers don't match.
 vector<string> names(last_names); // Element type doesn't match.
 forward_list<string> names(first_names.begin(), last_names.begin()); // Converts const char* to string.
 ```
+
+For `array` objects, both the type and the size must be specified:
+
+```
+array<int, 10> int_array;
+array<string, 12> string_array;
+```
+### Assignment
+|Assignment and swap||
+|:---|:---|
+|`container1 = container2;`|Assign c2 to c1.|
+|`container = {ca,cb,cc};`|Assign elements of ca, cb, and cc to c1. This does not work for `array`.|
+|`container.assign(ib,ie);`, `container.assign(initializer_list);`, `container.assign(n,v);`|Assigns the values in iterators ib, ie to container. Assigns the values in initializer_list to container. Replaces elements in container with *n* elements with value *v*.|
+|`ca.swap(cb);`|Swap the elements in ca with cb. This does not copy, move, delete or insert any elements. When swapping arrays, this does exchanges elements.|
+|`swap(ca,cb);`|Same as above.|
+
+|Equality and Relational Operators||
+|:---|:---|
+|`==`, `!=`|Valid for all container types.|
+|`<`, `<=`, `>`, `>=`|Relationals, not valid for unordered associative containers.|
+
+- Must compare two containers of same type.
+- Can only use relational operator to compare two containers as long as the appropriate comparrion operator is defined.
+- If both containers are the same size and all elements are equal, then the two containers are equal.
+- If the containers have different sizes but every element of the smaller container is equal to the corresponding element of the larger one, then the smaller one is less than the other.
+- If neither container is an intitial subsequence of the other, then the comparison depends on comparing the first unequal elements.
+
+```
+vector<int> vector1 = { 1, 3, 5, 7, 9, 11 };
+vector<int> vector2 = { 1, 3, 11 };
+vector<int> vector3 = { 1, 3, 5, 7 };
+vector<int> vector4 = { 1, 3, 5, 7, 9, 11 };
+vector1 < vector2;
+vector1 < vector3;
+vector1 == vector4;
+vector1 == vector2;
+```
+### Adding & Removing Elements
+|Add/Remove Elements (not valid for `array`)||
+|:---|:---|
+|`container.clear();`|Remove all the elements in the container and return void.|
+|`container.emplace(p, args);`|Creates a new element using *args* and inserts it before *p*.|
+|`container.emplace(inits);`|Use *inits* to construct an element in container.|
+|`container.erase(args);`|Remove the element(s) specified by **args**|
+|`container.insert(args);`|Copies the element(s), **args** into container.|
+|`container.insert(p,n,v);`|Inserts *n* elements with the value of *v* at the *p* position, which is an interator.|
+|`container.insert(p,b,e);`|Inserts elements in the range of *b* to *e* at *p* position.|
+|`container.insert(p, initializer_list);`|Inserts *initializer_list* elements at *p* position.|
+|`container.pop_back()`||
+|`container.pop_front()`||
+|`container.push_back(e);`|Adds an element at the end of the container. Cannot use on `array` or `forward_list`.|
+|`container.emplace_back(args)`|Creates a new element with the provided argments and adds it to the end of the container.|
+|`container.push_front(e);`|Adds an element at the front of the container. For `list`, `forward_list`, and `deque`|
+|`container.emplace_front(args)`|Creates a new element with the provided argments and adds it to the front of the container.|
+
+
+|forward_list specific operation|Description|
+|:---|:---|
+|`flist.before_begin();`|Iterator denoting the nonexistent element jhust before the beginning of the list. May not be dereferenced. This returns an **off-the-beginning** iterator.|
+|`flist.cbefore_begin();`|Same as above but returns a `const`.|
+|`flist.insert_after(p, v);`|Inserts elements after iterator *p*.|
+|`flist.insert_after(p,n,v);`|Inserts *n* elements with the value of *v* after the iterator *p*.|
+|`flist.insert_after(p,b,e);`|Inserts a range of elements (*b* - *e*) after *p*.|
+|`flist.emplace_after(p, args);`|Creates a new object using *args* and inserts it into the container after *p*.|
+|`flist.erase_after(p);`|Erases the element at *p*.|
+|`flist.before_begin(b,e);`|Erases all elements within the range of *b* and *e*.|
+
+In a forward_list, there is no easy way to retrieve the element's predacessor, which makes it impossible to have an insert, emplace, or erase method.
+
+### Accessing Elements
+|Operation|Description|
+|:---|:---|
+|`container.front();`|Returns a reference to the first element in the container.|
+|`container.back();`|Returns a reference to the last element in the container.|
+|`container[n];`|Returns a reference to the element at index *n*.|
+|`container.at(n);`|Returns a reference to the element at the index of *n*.|
+
+|Size||
+|:---|:---|
+|`container.size();`|Retrieves the number of elements in the container. This is not valid for `forward_list`|
+|`container.max_size();`|Returns the maximum number of elements the container can hold.|
+|`container.empty();`|Whether or not the container is empty.|
